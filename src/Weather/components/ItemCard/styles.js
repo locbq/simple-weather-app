@@ -1,7 +1,8 @@
 import {
   Typography,
   Card,
-  styled
+  styled,
+  Grid
 } from '@material-ui/core';
 
 export const StyledTypoParagraph = styled(Typography)({
@@ -15,4 +16,8 @@ export const StyledCard = styled(Card)({
   '&:hover': {
     background: 'rgba(255,255,255,1)',
   }
+})
+
+export const StyledGrid = styled(Grid)({
+  marginBottom: '1rem'
 })

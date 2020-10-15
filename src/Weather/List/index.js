@@ -31,7 +31,7 @@ const WeatherList = ({timeOfDay}) => {
   useEffect(() => {
     getLocation().then((response) => {
       setLocation({
-        country: response.data.countryCode,
+        country: response.data.country_code,
         city: response.data.city
       })
     }).catch((e) => {

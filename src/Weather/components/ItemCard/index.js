@@ -10,7 +10,8 @@ import {
 } from '../../../helpers/common';
 import {
   StyledTypoParagraph,
-  StyledCard
+  StyledCard,
+  StyledGrid
 } from './styles';
 
 const WeatherItemCard = ({
@@ -20,7 +21,7 @@ const WeatherItemCard = ({
   return (
     <StyledCard>
       <Grid container>
-        <Grid
+        <StyledGrid
           item
           container
           md={5}
@@ -32,7 +33,7 @@ const WeatherItemCard = ({
             alt="icon"
           />
           <Typography variant="caption">{convertTimeStampToDate(weather.dt)}</Typography>
-        </Grid>
+        </StyledGrid>
         <Grid
           item
           container

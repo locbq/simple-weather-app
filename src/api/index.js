@@ -11,5 +11,5 @@ export function getWeatherList(city, country) {
 }
 
 export function getLocation() {
-  return axios.get('http://ip-api.com/json/')
+  return axios.get('https://freegeoip.app/json/')
 }
