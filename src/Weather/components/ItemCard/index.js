@@ -4,7 +4,10 @@ import {
   Typography
 } from '@material-ui/core';
 
-import {getWeatherIcon} from '../../../constants/common';
+import {
+  getWeatherIcon,
+  convertTimeStampToDate
+} from '../../../helpers/common';
 import {
   StyledTypoParagraph,
   StyledCard
@@ -28,17 +31,17 @@ const WeatherItemCard = ({
             src={getWeatherIcon(weather.weather[0].icon)}
             alt="icon"
           />
+          <Typography variant="caption">{convertTimeStampToDate(weather.dt)}</Typography>
         </Grid>
         <Grid
           item
           container
           justify="center"
+          alignItems="center"
           direction="column"
           md={7}
         >
-          {/* <Typography variant="h4">{Math.ceil(weather.temp[timeOfDay])} &#176;C</Typography> */}
           <Typography paragraph>{Math.ceil(weather.temp.min)} &#176;C / {Math.ceil(weather.temp.max)} &#176;C</Typography>
-          {/* <Typography variant="subtitle1">Feels like: {Math.ceil(weather.feels_like[timeOfDay])} &#176;C</Typography> */}
           <StyledTypoParagraph paragraph>{weather.weather[0].description}</StyledTypoParagraph>
         </Grid>
       </Grid>
