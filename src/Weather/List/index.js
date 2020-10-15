@@ -12,6 +12,8 @@ import {
   getLocation
 } from '../../api/index';
 import WeatherItemCard from '../components/ItemCard';
+import WeatherMainCard from '../components/MainCard';
+import {StyledGrid} from './styles';
 
 const WeatherList = ({timeOfDay}) => {
   const [weather, setWeather] = useState({});
@@ -40,6 +42,17 @@ const WeatherList = ({timeOfDay}) => {
 
   return (
     <Container fixed>
+      <StyledGrid
+        container
+        justify="center"
+      >
+        <Grid item lg={5} md={5} sm={12} xs={12}>
+          <WeatherMainCard
+            weather={weather}
+            timeOfDay={timeOfDay}
+          />
+        </Grid>
+      </StyledGrid>
       <Grid
         container
         spacing={2}
