@@ -10,7 +10,7 @@ export const StyledTypoParagraph = styled(Typography)({
 });
 
 export const StyledCard = styled(Card)({
-  padding: '20px',
+  padding: '10px',
   background: 'rgba(255,255,255,0.9)',
   transition: '0.25s ease-in-out',
   '&:hover': {
