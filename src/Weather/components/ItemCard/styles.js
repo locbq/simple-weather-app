@@ -15,7 +15,8 @@ export const StyledCard = styled(Card)({
   transition: '0.25s ease-in-out',
   '&:hover': {
     background: 'rgba(255,255,255,1)',
-  }
+  },
+  textAlign: 'center'
 })
 
 export const StyledGrid = styled(Grid)({
